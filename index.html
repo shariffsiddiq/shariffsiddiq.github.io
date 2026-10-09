@@ -335,106 +335,164 @@
             text-transform: uppercase;
         }
 
-        /* =========================
-           ABOUT
-        ========================= */
+       
+/* =========================
+   ABOUT
+========================= */
 
-        .about-grid {
-            display: grid;
-            grid-template-columns: 0.8fr 1.2fr;
-            gap: 55px;
-            align-items: start;
-        }
+.about-grid {
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr;
+    gap: 55px;
+    align-items: start;
+}
 
-        .photo-placeholder {
-            width: 100%;
-            aspect-ratio: 1 / 1;
-            min-height: 390px;
-            border: 2px dashed #bbb;
-            border-radius: 24px;
-            background: #efeee9;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            color: #999;
-            position: relative;
-            overflow: hidden;
-        }
+.about-left {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    min-width: 0;
+}
 
-        .photo-placeholder span {
-            font-size: 14px;
-            font-weight: 600;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-        }
+.about-image {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    border-radius: 24px;
+    background: #efeee9;
+    overflow: hidden;
+}
 
-        .about-content h3 {
-            font-family: "Playfair Display", serif;
-            font-size: 32px;
-            margin-bottom: 15px;
-        }
+.about-image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: inherit;
+}
 
-        .about-content > p {
-            color: var(--text);
-            margin-bottom: 30px;
-        }
+.about-content {
+    min-width: 0;
+}
 
-        .info-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            border-top: 1px solid var(--border);
-            border-left: 1px solid var(--border);
-        }
+.about-content h3 {
+    font-family: "Playfair Display", serif;
+    font-size: 32px;
+    margin-bottom: 15px;
+}
 
-        .info-item {
-            padding: 17px;
-            border-right: 1px solid var(--border);
-            border-bottom: 1px solid var(--border);
-        }
+.about-content > p {
+    color: var(--text);
+    margin-bottom: 30px;
+}
 
-        .info-item small {
-            display: block;
-            color: var(--muted);
-            font-size: 11px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-bottom: 4px;
-        }
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    border-top: 1px solid var(--border);
+    border-left: 1px solid var(--border);
+}
 
-        .info-item strong {
-            font-size: 14px;
-        }
+.info-item {
+    padding: 17px;
+    border-right: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    min-width: 0;
+    overflow-wrap: anywhere;
+}
 
-        .sub-section {
-            margin-top: 35px;
-        }
+.info-item small {
+    display: block;
+    color: var(--muted);
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 4px;
+}
 
-        .sub-section h4 {
-            font-size: 17px;
-            margin-bottom: 15px;
-        }
+.info-item strong {
+    font-size: 14px;
+}
 
-        .education-card,
-        .leadership-card {
-            border: 1px solid var(--border);
-            padding: 18px;
-            border-radius: 14px;
-            margin-bottom: 12px;
-            background: white;
-        }
+.sub-section {
+    margin-top: 35px;
+}
 
-        .education-card strong,
-        .leadership-card strong {
-            display: block;
-            margin-bottom: 5px;
-        }
+.about-left .sub-section {
+    margin-top: 0;
+}
 
-        .education-card span,
-        .leadership-card span {
-            color: var(--muted);
-            font-size: 13px;
-        }
+.sub-section h4 {
+    font-size: 17px;
+    margin-bottom: 15px;
+}
+
+.education-card,
+.leadership-card {
+    border: 1px solid var(--border);
+    padding: 18px;
+    border-radius: 14px;
+    margin-bottom: 12px;
+    background: white;
+}
+
+.education-card strong,
+.leadership-card strong {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.education-card span,
+.leadership-card span {
+    color: var(--muted);
+    font-size: 13px;
+    line-height: 1.6;
+    display: block;
+}
+
+/* =========================
+   ABOUT RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .about-left {
+        gap: 25px;
+    }
+
+    .about-image {
+        max-width: 320px;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .about-content h3 {
+        font-size: 27px;
+    }
+
+    .info-item {
+        padding: 13px;
+    }
+}
+
+@media (max-width: 420px) {
+    .info-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about-content h3 {
+        font-size: 24px;
+    }
+
+    .education-card,
+    .leadership-card {
+        padding: 15px;
+    }
+}
 
         /* =========================
            SKILLS
@@ -1020,205 +1078,164 @@
     </section>
 
 
-    <!-- =========================
-         ABOUT
-    ========================= -->
 
-    <section id="about">
+<!-- =========================
+     ABOUT
+========================= -->
 
-        <div class="container">
+<section id="about">
 
-            <div class="section-box reveal">
+    <div class="container">
 
-                <div class="section-heading">
+        <div class="section-box reveal">
 
-                    <div class="eyebrow">
-                        About Me
+            <div class="section-heading">
+
+                <div class="eyebrow">
+                    About Me
+                </div>
+
+                <h2>
+                    Data, Curiosity & Growth.
+                </h2>
+
+            </div>
+
+            <div class="about-grid">
+
+                <!-- LEFT COLUMN: PHOTO + LEADERSHIP -->
+
+                <div class="about-left">
+
+                    <div class="about-image">
+                        <img src="about-photo.jpeg" alt="Siddiq at his university campus">
                     </div>
 
-                    <h2>
-                        Data, Curiosity & Growth.
-                    </h2>
+                    <!-- LEADERSHIP & ACHIEVEMENTS -->
+
+                    <div class="sub-section">
+
+                        <h4>
+                            Leadership & Achievements
+                        </h4>
+
+                        <div class="leadership-card">
+
+                            <strong>
+                                Student Ambience Coordinator –
+                                Vignan Mahotsav 2023
+                            </strong>
+
+                            <span>
+                                Led 20+ volunteers and managed
+                                logistics for 500+ participants.
+                            </span>
+
+                        </div>
+
+                        <div class="leadership-card">
+
+                            <strong>
+                                MERN Stack Workshop 2024
+                            </strong>
+
+                            <span>
+                                Hands-on workshop covering MongoDB,
+                                Express.js, React and Node.js.
+                            </span>
+
+                        </div>
+
+                        <div class="leadership-card">
+
+                            <strong>
+                                Ozone Cybersecurity Workshop 2023
+                            </strong>
+
+                            <span>
+                                Practical cybersecurity and ethical
+                                hacking workshop.
+                            </span>
+
+                        </div>
+
+                    </div>
 
                 </div>
 
+                <!-- RIGHT COLUMN: ABOUT + DETAILS + EDUCATION -->
 
-                <div class="about-grid">
+                <div class="about-content">
 
+                    <h3>
+                        Hi, I'm Shariff Abubbakar Siddiq.
+                    </h3>
 
-                    <!-- FIRST PHOTO SPACE -->
+                    <p>
+                        I am an aspiring Data Analyst with a strong
+                        foundation in Python, SQL, Excel and data
+                        visualization. I enjoy working with real-world
+                        datasets, identifying patterns, performing
+                        analysis and presenting insights through
+                        clear dashboards and reports.
+                    </p>
 
-                   <div class="about-image">
-    <img src="about-photo.jpeg" alt="Siddiq at his university campus">
-</div>
+                    <div class="info-grid">
 
+                        <div class="info-item">
+                            <small>Full Name</small>
+                            <strong>Shariff Abubbakar Siddiq</strong>
+                        </div>
 
-                    <div class="about-content">
+                        <div class="info-item">
+                            <small>Date of Birth</small>
+                            <strong>18-12-2004</strong>
+                        </div>
 
-                        <h3>
-                            Hi, I'm Shariff Abubbakar Siddiq.
-                        </h3>
+                        <div class="info-item">
+                            <small>Location</small>
+                            <strong>Eluru , India</strong>
+                        </div>
 
+                        <div class="info-item">
+                            <small>Career Focus</small>
+                            <strong>Data Analytics</strong>
+                        </div>
 
-                        <p>
+                    </div>
 
-                            I am an aspiring Data Analyst with a strong
-                            foundation in Python, SQL, Excel and data
-                            visualization. I enjoy working with real-world
-                            datasets, identifying patterns, performing
-                            analysis and presenting insights through
-                            clear dashboards and reports.
+                    <!-- EDUCATION -->
 
-                        </p>
+                    <div class="sub-section">
 
+                        <h4>
+                            Education
+                        </h4>
 
-                        <div class="info-grid">
+                        <div class="education-card">
 
+                            <strong>
+                                Vignan's Foundation for Science,
+                                Technology and Research
+                            </strong>
 
-                            <div class="info-item">
-
-                                <small>
-                                    Full Name
-                                </small>
-
-                                <strong>
-                                    Shariff Abubbakar Siddiq
-                                </strong>
-
-                            </div>
-
-
-                            <div class="info-item">
-
-                                <small>
-                                    Date of Birth
-                                </small>
-
-                                <strong>
-                                    18-12-2004
-                                </strong>
-
-                            </div>
-
-
-                            <div class="info-item">
-
-                                <small>
-                                    Location
-                                </small>
-
-                                <strong>
-                                    Eluru , India
-                                </strong>
-
-                            </div>
-
-
-                            <div class="info-item">
-
-                                <small>
-                                    Career Focus
-                                </small>
-
-                                <strong>
-                                    Data Analytics
-                                </strong>
-
-                            </div>
+                            <span>
+                                Bachelor of Technology in Cyber Security
+                                · 2022–2026 · 72.8%
+                            </span>
 
                         </div>
 
+                        <div class="education-card">
 
-                        <!-- EDUCATION -->
+                            <strong>
+                                Narayana Junior College, Eluru
+                            </strong>
 
-                        <div class="sub-section">
-
-                            <h4>
-                                Education
-                            </h4>
-
-
-                            <div class="education-card">
-
-                                <strong>
-                                    Vignan's Foundation for Science,
-                                    Technology and Research
-                                </strong>
-
-                                <span>
-                                    Bachelor of Technology in Cyber Security
-                                    · 2022–2026 · 72.8%
-                                </span>
-
-                            </div>
-
-
-                            <div class="education-card">
-
-                                <strong>
-                                    Narayana Junior College, Eluru
-                                </strong>
-
-                                <span>
-                                    Intermediate (MPC)
-                                    · 2020–2022 · 77.3%
-                                </span>
-
-                            </div>
-
-                        </div>
-
-
-                        <!-- LEADERSHIP -->
-
-                        <div class="sub-section">
-
-                            <h4>
-                                Leadership & Achievements
-                            </h4>
-
-
-                            <div class="leadership-card">
-
-                                <strong>
-                                    Student Ambience Coordinator –
-                                    Vignan Mahotsav 2023
-                                </strong>
-
-                                <span>
-                                    Led 20+ volunteers and managed
-                                    logistics for 500+ participants.
-                                </span>
-
-                            </div>
-
-
-                            <div class="leadership-card">
-
-                                <strong>
-                                    MERN Stack Workshop 2024
-                                </strong>
-
-                                <span>
-                                    Hands-on workshop covering MongoDB,
-                                    Express.js, React and Node.js.
-                                </span>
-
-                            </div>
-
-
-                            <div class="leadership-card">
-
-                                <strong>
-                                    Ozone Cybersecurity Workshop 2023
-                                </strong>
-
-                                <span>
-                                    Practical cybersecurity and ethical
-                                    hacking workshop.
-                                </span>
-
-                            </div>
+                            <span>
+                                Intermediate (MPC)
+                                · 2020–2022 · 77.3%
+                            </span>
 
                         </div>
 
@@ -1230,7 +1247,11 @@
 
         </div>
 
-    </section>
+    </div>
+
+</section>
+
+
 
 
     <!-- =========================
