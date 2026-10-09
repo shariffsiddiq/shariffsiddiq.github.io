@@ -1,30 +1,21 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <meta name="description" content="Siddiq - Data Analytics Portfolio">
     <meta name="author" content="Shariff Abubbakar Siddiq">
 
     <title>Siddiq | Portfolio</title>
 
-    <!-- FAVICON: S -->
-    <link
-        rel="icon"
-        href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%23151515'/%3E%3Ctext x='50' y='70' font-size='65' text-anchor='middle' fill='%23ffffff' font-family='Georgia'%3ES%3C/text%3E%3C/svg%3E"
-    >
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%23151515'/%3E%3Ctext x='50' y='70' font-size='65' text-anchor='middle' fill='%23ffffff' font-family='Georgia'%3ES%3C/text%3E%3C/svg%3E">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <link
-        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
-        rel="stylesheet"
-    >
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
 
     <style>
-
         * {
             margin: 0;
             padding: 0;
@@ -56,15 +47,16 @@
             text-decoration: none;
         }
 
+        img {
+            max-width: 100%;
+        }
+
         .container {
             width: min(1180px, 92%);
             margin: auto;
         }
 
-        /* =========================
-           NAVBAR
-        ========================= */
-
+        /* NAVBAR */
         nav {
             position: sticky;
             top: 0;
@@ -79,6 +71,7 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
+            gap: 20px;
         }
 
         .logo {
@@ -93,6 +86,7 @@
         .s-icon {
             width: 39px;
             height: 39px;
+            flex: 0 0 39px;
             border: 2px solid var(--dark);
             border-radius: 50%;
             display: flex;
@@ -121,7 +115,6 @@
         }
 
         @keyframes logoFloat {
-
             0%, 100% {
                 transform: translateY(0);
             }
@@ -129,12 +122,11 @@
             50% {
                 transform: translateY(-3px);
             }
-
         }
 
         .nav-links {
             display: flex;
-            gap: 30px;
+            gap: 25px;
             list-style: none;
         }
 
@@ -168,23 +160,21 @@
             cursor: pointer;
         }
 
-        /* =========================
-           COMMON
-        ========================= */
-
+        /* COMMON */
         section {
-            padding: 90px 0;
+            padding: 80px 0;
+            scroll-margin-top: 78px;
         }
 
         .section-box {
             border: 1px solid var(--border);
             border-radius: 24px;
             background: rgba(255, 255, 255, 0.55);
-            padding: 65px;
+            padding: 55px;
         }
 
         .section-heading {
-            margin-bottom: 45px;
+            margin-bottom: 38px;
         }
 
         .eyebrow {
@@ -208,40 +198,24 @@
             margin-top: 18px;
         }
 
-        /* =========================
-           HERO
-        ========================= */
-        .hero-image img,
-.about-image img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-    border-radius: inherit;
-}
-
-.hero-image,
-.about-image {
-    overflow: hidden;
-}
+        /* HERO */
         .hero {
-            min-height: 88vh;
+            min-height: 82vh;
             display: flex;
             align-items: center;
-            padding: 75px 0;
+            padding: 65px 0;
         }
 
         .hero-grid {
             display: grid;
-            grid-template-columns: 1fr 0.85fr;
-            gap: 70px;
+            grid-template-columns: minmax(0, 1fr) minmax(0, 0.85fr);
+            gap: 60px;
             align-items: center;
         }
 
         .hero h1 {
             font-family: "Playfair Display", serif;
-            font-size: clamp(50px, 7vw, 82px);
+            font-size: clamp(48px, 6.5vw, 82px);
             line-height: 0.98;
             margin-bottom: 25px;
         }
@@ -295,7 +269,7 @@
 
         .btn-primary:hover {
             transform: translateY(-3px);
-            box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
         }
 
         .btn-secondary {
@@ -307,90 +281,84 @@
             border-color: var(--accent);
         }
 
-        /* HERO PHOTO PLACEHOLDER */
-
-        .hero-photo-space {
+        .hero-image {
             width: 100%;
-            aspect-ratio: 1 / 1;
             max-width: 440px;
+            aspect-ratio: 4 / 5;
             margin-left: auto;
-            border: 2px dashed #bdbdbd;
-            border-radius: 28px;
-            background: #efeee9;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            color: #999;
-            position: relative;
             overflow: hidden;
+            border-radius: 28px;
             transform: rotate(1deg);
             box-shadow: 12px 12px 0 var(--accent);
+            background: #efeee9;
         }
 
-        .hero-photo-space span {
-            font-size: 13px;
-            font-weight: 700;
-            letter-spacing: 1px;
-            text-transform: uppercase;
+        .hero-image img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            border-radius: inherit;
         }
 
-        /* =========================
-           ABOUT
-        ========================= */
-
+        /* ABOUT */
         .about-grid {
             display: grid;
-            grid-template-columns: 0.8fr 1.2fr;
-            gap: 55px;
+            grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+            gap: 40px;
             align-items: start;
         }
 
-        .photo-placeholder {
+        .about-image {
             width: 100%;
-            aspect-ratio: 1 / 1;
-            min-height: 390px;
-            border: 2px dashed #bbb;
+            aspect-ratio: 4 / 5;
+            min-width: 0;
+            height: auto;
             border-radius: 24px;
-            background: #efeee9;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            color: #999;
-            position: relative;
             overflow: hidden;
+            align-self: start;
+            background: #efeee9;
         }
 
-        .photo-placeholder span {
-            font-size: 14px;
-            font-weight: 600;
-            letter-spacing: 1px;
-            text-transform: uppercase;
+        .about-image img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            border-radius: inherit;
+        }
+
+        .about-content {
+            min-width: 0;
         }
 
         .about-content h3 {
             font-family: "Playfair Display", serif;
             font-size: 32px;
+            line-height: 1.25;
             margin-bottom: 15px;
         }
 
         .about-content > p {
             color: var(--text);
-            margin-bottom: 30px;
+            margin-bottom: 24px;
         }
 
         .info-grid {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
+            grid-template-columns: repeat(2, minmax(0, 1fr));
             border-top: 1px solid var(--border);
             border-left: 1px solid var(--border);
         }
 
         .info-item {
-            padding: 17px;
+            min-width: 0;
+            padding: 15px;
             border-right: 1px solid var(--border);
             border-bottom: 1px solid var(--border);
+            overflow-wrap: anywhere;
         }
 
         .info-item small {
@@ -404,23 +372,24 @@
 
         .info-item strong {
             font-size: 14px;
+            overflow-wrap: anywhere;
         }
 
         .sub-section {
-            margin-top: 35px;
+            margin-top: 28px;
         }
 
         .sub-section h4 {
             font-size: 17px;
-            margin-bottom: 15px;
+            margin-bottom: 12px;
         }
 
         .education-card,
         .leadership-card {
             border: 1px solid var(--border);
-            padding: 18px;
+            padding: 16px;
             border-radius: 14px;
-            margin-bottom: 12px;
+            margin-bottom: 10px;
             background: white;
         }
 
@@ -436,13 +405,10 @@
             font-size: 13px;
         }
 
-        /* =========================
-           SKILLS
-        ========================= */
-
+        /* SKILLS */
         .skills-grid {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: repeat(3, minmax(0, 1fr));
             gap: 18px;
         }
 
@@ -476,21 +442,17 @@
             font-size: 14px;
         }
 
-        /* =========================
-           WORKFLOW
-        ========================= */
-
+        /* WORKFLOW */
         .workflow {
             display: grid;
-            grid-template-columns: repeat(5, 1fr);
-            gap: 0;
+            grid-template-columns: repeat(5, minmax(0, 1fr));
             border: 1px solid var(--border);
             border-radius: 18px;
             overflow: hidden;
         }
 
         .workflow-step {
-            padding: 28px 20px;
+            padding: 25px 18px;
             border-right: 1px solid var(--border);
             background: white;
         }
@@ -515,17 +477,16 @@
             color: var(--muted);
         }
 
-        /* =========================
-           PROJECTS
-        ========================= */
-
+        /* PROJECTS */
         .projects-grid {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: repeat(3, minmax(0, 1fr));
             gap: 20px;
+            align-items: stretch;
         }
 
         .project-card {
+            min-width: 0;
             border: 1px solid var(--dark);
             border-radius: 22px;
             background: white;
@@ -541,7 +502,7 @@
         }
 
         .project-header {
-            padding: 27px;
+            padding: 25px;
             background: var(--dark);
             color: white;
             min-height: 190px;
@@ -557,13 +518,13 @@
 
         .project-header h3 {
             font-family: "Playfair Display", serif;
-            font-size: 27px;
+            font-size: 25px;
             line-height: 1.15;
             margin-top: 12px;
         }
 
         .project-body {
-            padding: 27px;
+            padding: 25px;
             flex: 1;
             display: flex;
             flex-direction: column;
@@ -606,13 +567,10 @@
             width: fit-content;
         }
 
-        /* =========================
-           CERTIFICATIONS
-        ========================= */
-
+        /* CERTIFICATIONS */
         .cert-grid {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
+            grid-template-columns: repeat(2, minmax(0, 1fr));
             gap: 18px;
         }
 
@@ -620,6 +578,7 @@
             display: flex;
             align-items: center;
             gap: 20px;
+            min-width: 0;
             background: white;
             border: 1px solid var(--border);
             border-radius: 18px;
@@ -633,7 +592,7 @@
         }
 
         .cert-icon {
-            min-width: 65px;
+            flex: 0 0 65px;
             height: 65px;
             border-radius: 15px;
             background: var(--light-accent);
@@ -642,6 +601,10 @@
             align-items: center;
             justify-content: center;
             font-size: 26px;
+        }
+
+        .cert-info {
+            min-width: 0;
         }
 
         .cert-info h3 {
@@ -655,14 +618,11 @@
             font-size: 12px;
         }
 
-        /* =========================
-           CONTACT
-        ========================= */
-
+        /* CONTACT */
         .contact-grid {
             display: grid;
-            grid-template-columns: 0.8fr 1.2fr;
-            gap: 60px;
+            grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+            gap: 50px;
         }
 
         .contact-intro h2 {
@@ -675,15 +635,18 @@
 
         .contact-links {
             border-top: 1px solid var(--border);
+            min-width: 0;
         }
 
         .contact-link {
             display: flex;
             justify-content: space-between;
             align-items: center;
+            gap: 15px;
             padding: 20px 0;
             border-bottom: 1px solid var(--border);
             transition: 0.3s;
+            min-width: 0;
         }
 
         .contact-link:hover {
@@ -698,16 +661,15 @@
 
         .contact-link strong {
             font-size: 15px;
+            overflow-wrap: anywhere;
         }
 
         .arrow {
             font-size: 22px;
+            flex-shrink: 0;
         }
 
-        /* =========================
-           FOOTER
-        ========================= */
-
+        /* FOOTER */
         footer {
             border-top: 1px solid var(--border);
             padding: 30px 0;
@@ -725,16 +687,17 @@
             color: var(--muted);
         }
 
-        .footer-brand {
-            font-family: "Playfair Display", serif;
+        .back-to-top {
+            font-size: 13px;
             font-weight: 700;
-            font-size: 20px;
+            white-space: nowrap;
         }
 
-        /* =========================
-           ANIMATION
-        ========================= */
+        .back-to-top:hover {
+            color: var(--accent-dark);
+        }
 
+        /* ANIMATION */
         .reveal {
             opacity: 0;
             transform: translateY(25px);
@@ -746,44 +709,58 @@
             transform: translateY(0);
         }
 
-        /* =========================
-           RESPONSIVE
-        ========================= */
-
+        /* TABLET */
         @media (max-width: 1050px) {
-
             .projects-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .project-card {
-                max-width: 700px;
+                grid-template-columns: repeat(2, minmax(0, 1fr));
             }
 
             .cert-grid {
                 grid-template-columns: 1fr;
             }
 
+            .nav-links {
+                gap: 16px;
+            }
+
+            .nav-links a {
+                font-size: 13px;
+            }
+
+            .section-box {
+                padding: 42px;
+            }
         }
 
         @media (max-width: 950px) {
-
             .hero-grid,
             .about-grid,
             .contact-grid {
-                grid-template-columns: 1fr;
+                grid-template-columns: minmax(0, 1fr);
+                gap: 32px;
             }
 
-            .hero-photo-space {
+            .hero-image {
                 margin: 10px auto 0;
             }
 
+            .about-image {
+                width: 100%;
+                max-width: 380px;
+                aspect-ratio: 4 / 5;
+                margin-inline: auto;
+            }
+
+            .about-content {
+                width: 100%;
+            }
+
             .skills-grid {
-                grid-template-columns: repeat(2, 1fr);
+                grid-template-columns: repeat(2, minmax(0, 1fr));
             }
 
             .workflow {
-                grid-template-columns: repeat(2, 1fr);
+                grid-template-columns: repeat(2, minmax(0, 1fr));
             }
 
             .workflow-step:nth-child(2) {
@@ -797,19 +774,30 @@
             .workflow-step:last-child {
                 border-right: 1px solid var(--border);
             }
-
-            .section-box {
-                padding: 40px;
-            }
-
         }
 
+        /* MOBILE */
         @media (max-width: 700px) {
+            .nav-container {
+                min-height: 70px;
+            }
+
+            .logo {
+                font-size: 20px;
+                gap: 8px;
+            }
+
+            .s-icon {
+                width: 34px;
+                height: 34px;
+                flex-basis: 34px;
+                font-size: 19px;
+            }
 
             .nav-links {
                 display: none;
                 position: absolute;
-                top: 78px;
+                top: 70px;
                 left: 0;
                 width: 100%;
                 background: var(--bg);
@@ -828,34 +816,76 @@
             }
 
             section {
-                padding: 55px 0;
+                padding: 48px 0;
+                scroll-margin-top: 70px;
             }
 
             .section-box {
-                padding: 25px;
+                padding: 24px;
                 border-radius: 18px;
+            }
+
+            .section-heading {
+                margin-bottom: 30px;
             }
 
             .hero {
                 min-height: auto;
-                padding: 65px 0;
+                padding: 55px 0;
+            }
+
+            .hero-grid {
+                gap: 35px;
             }
 
             .hero h1 {
-                font-size: 52px;
+                font-size: clamp(42px, 11vw, 54px);
             }
 
-            .hero-photo-space {
+            .hero-text {
+                font-size: 16px;
+            }
+
+            .hero-image {
+                max-width: min(85%, 340px);
                 box-shadow: 7px 7px 0 var(--accent);
             }
 
-            .skills-grid,
-            .info-grid {
-                grid-template-columns: 1fr;
+            .about-grid {
+                gap: 25px;
             }
 
-            .workflow {
-                grid-template-columns: 1fr;
+            .about-image {
+                max-width: 300px;
+                aspect-ratio: 4 / 5;
+            }
+
+            .about-content h3 {
+                font-size: 27px;
+            }
+
+            .about-content > p {
+                margin-bottom: 20px;
+            }
+
+            .info-grid,
+            .skills-grid,
+            .workflow,
+            .projects-grid {
+                grid-template-columns: minmax(0, 1fr);
+            }
+
+            .info-item {
+                padding: 13px;
+            }
+
+            .sub-section {
+                margin-top: 24px;
+            }
+
+            .education-card,
+            .leadership-card {
+                padding: 14px;
             }
 
             .workflow-step {
@@ -867,1366 +897,609 @@
                 border-bottom: 0;
             }
 
+            .project-header {
+                min-height: auto;
+            }
+
             .cert-card {
                 align-items: flex-start;
+                gap: 14px;
+                padding: 17px;
+            }
+
+            .cert-icon {
+                flex-basis: 52px;
+                height: 52px;
+                font-size: 22px;
+            }
+
+            .contact-grid {
+                gap: 30px;
+            }
+
+            .contact-link strong {
+                font-size: 14px;
             }
 
             .footer-content {
                 flex-direction: column;
                 text-align: center;
             }
-
         }
 
+        @media (prefers-reduced-motion: reduce) {
+            *,
+            *::before,
+            *::after {
+                scroll-behavior: auto !important;
+                animation-duration: 0.01ms !important;
+                transition-duration: 0.01ms !important;
+            }
+
+            .reveal {
+                opacity: 1;
+                transform: none;
+            }
+        }
     </style>
 </head>
 
-
 <body id="top">
 
-
-    <!-- =========================
-         NAVIGATION
-    ========================= -->
-
+    <!-- NAVIGATION -->
     <nav>
-
         <div class="container nav-container">
-
             <a href="#home" class="logo">
-
                 <span class="s-icon">S</span>
-
-                <span class="logo-text">
-                    Ｓｉｄｄｉｑ | Ｐｏｒｔｆｏｌｉｏ
-                </span>
-
+                <span class="logo-text">Ｓｉｄｄｉｑ | Ｐｏｒｔｆｏｌｉｏ</span>
             </a>
 
-
-            <button class="menu-btn" id="menuBtn">
-                ☰
-            </button>
-
+            <button class="menu-btn" id="menuBtn"
+                    aria-label="Toggle navigation"
+                    aria-expanded="false">☰</button>
 
             <ul class="nav-links" id="navLinks">
-
-                <li>
-                    <a href="#home">Home</a>
-                </li>
-
-                <li>
-                    <a href="#about">About</a>
-                </li>
-
-                <li>
-                    <a href="#skills">Skills</a>
-                </li>
-
-                <li>
-                    <a href="#workflow">Workflow</a>
-                </li>
-
-                <li>
-                    <a href="#projects">Projects</a>
-                </li>
-
-                <li>
-                    <a href="#certification">Certification</a>
-                </li>
-
-                <li>
-                    <a href="#contact">Contact</a>
-                </li>
-
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#workflow">Workflow</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#certification">Certification</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
-
         </div>
-
     </nav>
 
-
-    <!-- =========================
-         HERO
-    ========================= -->
-
+    <!-- HERO -->
     <section class="hero" id="home">
-
         <div class="container hero-grid">
-
-
             <div class="reveal">
-
-                <div class="eyebrow">
-                    Aspiring Data Analyst
-                </div>
-
+                <div class="eyebrow">Aspiring Data Analyst</div>
 
                 <h1>
-
-                    Turning
-                    <span>Data</span>
-
-                    <br>
-
-                    Into Meaningful
-
-                    <br>
-
+                    Turning <span>Data</span><br>
+                    Into Meaningful<br>
                     Insights.
-
                 </h1>
 
-
                 <p class="hero-text">
-
                     I work with Python, SQL, Excel and Power BI to
                     clean, analyze and visualize data — transforming
                     raw datasets into meaningful insights.
-
                 </p>
 
-
                 <div class="hero-buttons">
-
-                    <a
-                        href="#projects"
-                        class="btn btn-primary"
-                    >
-                        View My Projects →
-                    </a>
-
-
-                    <a
-                        href="#contact"
-                        class="btn btn-secondary"
-                    >
-                        Let's Connect
-                    </a>
-
+                    <a href="#projects" class="btn btn-primary">View My Projects →</a>
+                    <a href="#contact" class="btn btn-secondary">Let's Connect</a>
                 </div>
-
             </div>
 
-
-            <!-- SECOND PHOTO SPACE -->
-
             <div class="hero-image">
-    <img src="hero-photo.jpeg" alt="Siddiq — Aspiring Data Analyst">
-</div>
-
+                <img src="hero-photo.jpeg" alt="Siddiq — Aspiring Data Analyst">
+            </div>
         </div>
-
     </section>
 
-
-    <!-- =========================
-         ABOUT
-    ========================= -->
-
+    <!-- ABOUT -->
     <section id="about">
-
         <div class="container">
-
             <div class="section-box reveal">
-
                 <div class="section-heading">
-
-                    <div class="eyebrow">
-                        About Me
-                    </div>
-
-                    <h2>
-                        Data, Curiosity & Growth.
-                    </h2>
-
+                    <div class="eyebrow">About Me</div>
+                    <h2>Data, Curiosity &amp; Growth.</h2>
                 </div>
 
-
                 <div class="about-grid">
-
-
-                    <!-- FIRST PHOTO SPACE -->
-
-                   <div class="about-image">
-    <img src="about-photo.jpeg" alt="Siddiq at his university campus">
-</div>
-
+                    <div class="about-image">
+                        <img src="about-photo.jpeg" alt="Siddiq at his university campus">
+                    </div>
 
                     <div class="about-content">
-
-                        <h3>
-                            Hi, I'm Shariff Abubbakar Siddiq.
-                        </h3>
-
+                        <h3>Hi, I'm Shariff Abubbakar Siddiq.</h3>
 
                         <p>
-
                             I am an aspiring Data Analyst with a strong
                             foundation in Python, SQL, Excel and data
                             visualization. I enjoy working with real-world
                             datasets, identifying patterns, performing
                             analysis and presenting insights through
                             clear dashboards and reports.
-
                         </p>
 
-
                         <div class="info-grid">
-
-
                             <div class="info-item">
-
-                                <small>
-                                    Full Name
-                                </small>
-
-                                <strong>
-                                    Shariff Abubbakar Siddiq
-                                </strong>
-
+                                <small>Full Name</small>
+                                <strong>Shariff Abubbakar Siddiq</strong>
                             </div>
 
-
                             <div class="info-item">
-
-                                <small>
-                                    Date of Birth
-                                </small>
-
-                                <strong>
-                                    18-12-2004
-                                </strong>
-
+                                <small>Date of Birth</small>
+                                <strong>18-12-2004</strong>
                             </div>
 
-
                             <div class="info-item">
-
-                                <small>
-                                    Location
-                                </small>
-
-                                <strong>
-                                    Eluru , India
-                                </strong>
-
+                                <small>Location</small>
+                                <strong>Eluru , India</strong>
                             </div>
 
-
                             <div class="info-item">
-
-                                <small>
-                                    Career Focus
-                                </small>
-
-                                <strong>
-                                    Data Analytics
-                                </strong>
-
+                                <small>Career Focus</small>
+                                <strong>Data Analytics</strong>
                             </div>
-
                         </div>
 
-
-                        <!-- EDUCATION -->
-
                         <div class="sub-section">
-
-                            <h4>
-                                Education
-                            </h4>
-
+                            <h4>Education</h4>
 
                             <div class="education-card">
-
                                 <strong>
                                     Vignan's Foundation for Science,
                                     Technology and Research
                                 </strong>
-
                                 <span>
                                     Bachelor of Technology in Cyber Security
                                     · 2022–2026 · 72.8%
                                 </span>
-
                             </div>
 
-
                             <div class="education-card">
-
-                                <strong>
-                                    Narayana Junior College, Eluru
-                                </strong>
-
+                                <strong>Narayana Junior College, Eluru</strong>
                                 <span>
                                     Intermediate (MPC)
                                     · 2020–2022 · 77.3%
                                 </span>
-
                             </div>
-
                         </div>
 
-
-                        <!-- LEADERSHIP -->
-
                         <div class="sub-section">
-
-                            <h4>
-                                Leadership & Achievements
-                            </h4>
-
+                            <h4>Leadership &amp; Achievements</h4>
 
                             <div class="leadership-card">
-
                                 <strong>
                                     Student Ambience Coordinator –
                                     Vignan Mahotsav 2023
                                 </strong>
-
                                 <span>
                                     Led 20+ volunteers and managed
                                     logistics for 500+ participants.
                                 </span>
-
                             </div>
 
-
                             <div class="leadership-card">
-
-                                <strong>
-                                    MERN Stack Workshop 2024
-                                </strong>
-
+                                <strong>MERN Stack Workshop 2024</strong>
                                 <span>
                                     Hands-on workshop covering MongoDB,
                                     Express.js, React and Node.js.
                                 </span>
-
                             </div>
 
-
                             <div class="leadership-card">
-
-                                <strong>
-                                    Ozone Cybersecurity Workshop 2023
-                                </strong>
-
+                                <strong>Ozone Cybersecurity Workshop 2023</strong>
                                 <span>
                                     Practical cybersecurity and ethical
                                     hacking workshop.
                                 </span>
-
                             </div>
-
                         </div>
-
                     </div>
-
                 </div>
-
             </div>
-
         </div>
-
     </section>
 
-
-    <!-- =========================
-         SKILLS
-    ========================= -->
-
+    <!-- SKILLS -->
     <section id="skills">
-
         <div class="container">
-
             <div class="section-box reveal">
-
                 <div class="section-heading">
-
-                    <div class="eyebrow">
-                        Technical Skills
-                    </div>
-
-                    <h2>
-                        Tools I Work With.
-                    </h2>
-
+                    <div class="eyebrow">Technical Skills</div>
+                    <h2>Tools I Work With.</h2>
                     <p class="description">
-
                         My toolkit covers the complete data analytics
                         workflow — from cleaning raw data to building
                         dashboards and communicating insights.
-
                     </p>
-
                 </div>
-
 
                 <div class="skills-grid">
-
-
                     <div class="skill-card">
-
-                        <div class="skill-number">
-                            01
-                        </div>
-
-                        <h3>
-                            Python
-                        </h3>
-
-                        <p>
-                            Data cleaning, analysis, automation
-                            and statistical exploration.
-                        </p>
-
+                        <div class="skill-number">01</div>
+                        <h3>Python</h3>
+                        <p>Data cleaning, analysis, automation and statistical exploration.</p>
                     </div>
 
-
                     <div class="skill-card">
-
-                        <div class="skill-number">
-                            02
-                        </div>
-
-                        <h3>
-                            SQL / MySQL
-                        </h3>
-
-                        <p>
-                            Querying, filtering, aggregation,
-                            joins and window functions.
-                        </p>
-
+                        <div class="skill-number">02</div>
+                        <h3>SQL / MySQL</h3>
+                        <p>Querying, filtering, aggregation, joins and window functions.</p>
                     </div>
 
-
                     <div class="skill-card">
-
-                        <div class="skill-number">
-                            03
-                        </div>
-
-                        <h3>
-                            Data Analysis
-                        </h3>
-
-                        <p>
-                            Data cleaning, EDA, statistical analysis,
-                            validation and insight generation.
-                        </p>
-
+                        <div class="skill-number">03</div>
+                        <h3>Data Analysis</h3>
+                        <p>Data cleaning, EDA, statistical analysis, validation and insight generation.</p>
                     </div>
 
-
                     <div class="skill-card">
-
-                        <div class="skill-number">
-                            04
-                        </div>
-
-                        <h3>
-                            Python Libraries
-                        </h3>
-
-                        <p>
-                            NumPy, Pandas, Matplotlib and Seaborn
-                            for analysis and visualization.
-                        </p>
-
+                        <div class="skill-number">04</div>
+                        <h3>Python Libraries</h3>
+                        <p>NumPy, Pandas, Matplotlib and Seaborn for analysis and visualization.</p>
                     </div>
 
-
                     <div class="skill-card">
-
-                        <div class="skill-number">
-                            05
-                        </div>
-
-                        <h3>
-                            Excel & Power BI
-                        </h3>
-
-                        <p>
-                            Advanced Excel, dashboards, KPIs,
-                            charts and interactive reports.
-                        </p>
-
+                        <div class="skill-number">05</div>
+                        <h3>Excel &amp; Power BI</h3>
+                        <p>Advanced Excel, dashboards, KPIs, charts and interactive reports.</p>
                     </div>
 
-
                     <div class="skill-card">
-
-                        <div class="skill-number">
-                            06
-                        </div>
-
-                        <h3>
-                            Tools
-                        </h3>
-
-                        <p>
-                            Git, GitHub, VS Code and MySQL Workbench
-                            for project development.
-                        </p>
-
+                        <div class="skill-number">06</div>
+                        <h3>Tools</h3>
+                        <p>Git, GitHub, VS Code and MySQL Workbench for project development.</p>
                     </div>
-
-
                 </div>
-
             </div>
-
         </div>
-
     </section>
 
-
-    <!-- =========================
-         WORKFLOW
-    ========================= -->
-
+    <!-- WORKFLOW -->
     <section id="workflow">
-
         <div class="container">
-
             <div class="section-box reveal">
-
                 <div class="section-heading">
-
-                    <div class="eyebrow">
-                        My Workflow
-                    </div>
-
-                    <h2>
-                        From Raw Data to Insights.
-                    </h2>
-
+                    <div class="eyebrow">My Workflow</div>
+                    <h2>From Raw Data to Insights.</h2>
                 </div>
-
 
                 <div class="workflow">
-
-
                     <div class="workflow-step">
-
-                        <span>
-                            01
-                        </span>
-
-                        <h3>
-                            Excel
-                        </h3>
-
-                        <p>
-                            Initial exploration,
-                            cleaning and validation.
-                        </p>
-
+                        <span>01</span>
+                        <h3>Excel</h3>
+                        <p>Initial exploration, cleaning and validation.</p>
                     </div>
 
-
                     <div class="workflow-step">
-
-                        <span>
-                            02
-                        </span>
-
-                        <h3>
-                            Python
-                        </h3>
-
-                        <p>
-                            Data cleaning, EDA
-                            and statistical analysis.
-                        </p>
-
+                        <span>02</span>
+                        <h3>Python</h3>
+                        <p>Data cleaning, EDA and statistical analysis.</p>
                     </div>
 
-
                     <div class="workflow-step">
-
-                        <span>
-                            03
-                        </span>
-
-                        <h3>
-                            SQL
-                        </h3>
-
-                        <p>
-                            Querying, aggregation,
-                            filtering and validation.
-                        </p>
-
+                        <span>03</span>
+                        <h3>SQL</h3>
+                        <p>Querying, aggregation, filtering and validation.</p>
                     </div>
 
-
                     <div class="workflow-step">
-
-                        <span>
-                            04
-                        </span>
-
-                        <h3>
-                            Power BI
-                        </h3>
-
-                        <p>
-                            Interactive dashboards,
-                            KPIs and visualizations.
-                        </p>
-
+                        <span>04</span>
+                        <h3>Power BI</h3>
+                        <p>Interactive dashboards, KPIs and visualizations.</p>
                     </div>
 
-
                     <div class="workflow-step">
-
-                        <span>
-                            05
-                        </span>
-
-                        <h3>
-                            Insights
-                        </h3>
-
-                        <p>
-                            Communicating findings
-                            for better decisions.
-                        </p>
-
+                        <span>05</span>
+                        <h3>Insights</h3>
+                        <p>Communicating findings for better decisions.</p>
                     </div>
-
-
                 </div>
-
             </div>
-
         </div>
-
     </section>
 
-
-    <!-- =========================
-         PROJECTS
-    ========================= -->
-
+    <!-- PROJECTS -->
     <section id="projects">
-
         <div class="container">
-
             <div class="section-box reveal">
-
                 <div class="section-heading">
-
-                    <div class="eyebrow">
-                        Featured Projects
-                    </div>
-
-                    <h2>
-                        Analytics in Action.
-                    </h2>
-
+                    <div class="eyebrow">Featured Projects</div>
+                    <h2>Analytics in Action.</h2>
                     <p class="description">
-
                         Selected projects demonstrating my experience
                         with analytics, databases, Python and
                         real-world problem solving.
-
                     </p>
-
                 </div>
-
 
                 <div class="projects-grid">
 
-
                     <!-- PROJECT 1 -->
-
                     <div class="project-card">
-
                         <div class="project-header">
-
-                            <small>
-                                End-to-End Data Analytics
-                            </small>
-
-                            <h3>
-                                Indian Agricultural Market
-                                Price Analytics
-                            </h3>
-
+                            <small>End-to-End Data Analytics</small>
+                            <h3>Indian Agricultural Market Price Analytics</h3>
                         </div>
 
-
                         <div class="project-body">
-
                             <p>
-
                                 An end-to-end analytics project analyzing
                                 agricultural market prices across India
                                 using data sourced from the Government
                                 of India's official data.gov.in portal.
-
                             </p>
 
-
                             <div class="tags">
-
-                                <span class="tag">
-                                    Excel
-                                </span>
-
-                                <span class="tag">
-                                    Python
-                                </span>
-
-                                <span class="tag">
-                                    Pandas
-                                </span>
-
-                                <span class="tag">
-                                    SQL
-                                </span>
-
-                                <span class="tag">
-                                    Power BI
-                                </span>
-
+                                <span class="tag">Excel</span>
+                                <span class="tag">Python</span>
+                                <span class="tag">Pandas</span>
+                                <span class="tag">SQL</span>
+                                <span class="tag">Power BI</span>
                             </div>
-
 
                             <div class="project-points">
-
-                                <div class="project-point">
-                                    Data cleaning and validation
-                                </div>
-
-                                <div class="project-point">
-                                    Exploratory data analysis
-                                </div>
-
-                                <div class="project-point">
-                                    State and commodity analysis
-                                </div>
-
-                                <div class="project-point">
-                                    SQL window functions
-                                </div>
-
-                                <div class="project-point">
-                                    Interactive Power BI dashboard
-                                </div>
-
+                                <div class="project-point">Data cleaning and validation</div>
+                                <div class="project-point">Exploratory data analysis</div>
+                                <div class="project-point">State and commodity analysis</div>
+                                <div class="project-point">SQL window functions</div>
+                                <div class="project-point">Interactive Power BI dashboard</div>
                             </div>
 
-
-                            <a
-                                href="https://github.com/shariffsiddiq/Indian-Agricultural-Market-Price-Analytics.git"
-                                target="_blank"
-                                class="btn btn-primary"
-                            >
-                                View on GitHub →
-                            </a>
-
+                            <a href="https://github.com/shariffsiddiq/Indian-Agricultural-Market-Price-Analytics.git"
+                               target="_blank" rel="noopener noreferrer"
+                               class="btn btn-primary">View on GitHub →</a>
                         </div>
-
                     </div>
 
-
                     <!-- PROJECT 2 -->
-
                     <div class="project-card">
-
                         <div class="project-header">
-
-                            <small>
-                                Database & Analytics
-                            </small>
-
-                            <h3>
-                                Smart Inventory
-                                Management System
-                            </h3>
-
+                            <small>Database &amp; Analytics</small>
+                            <h3>Smart Inventory Management System</h3>
                         </div>
 
-
                         <div class="project-body">
-
                             <p>
-
                                 A database-driven inventory system designed
                                 to manage products, monitor stock levels and
                                 generate useful reporting insights.
-
                             </p>
 
-
                             <div class="tags">
-
-                                <span class="tag">
-                                    MySQL
-                                </span>
-
-                                <span class="tag">
-                                    SQL
-                                </span>
-
-                                <span class="tag">
-                                    Python
-                                </span>
-
-                                <span class="tag">
-                                    MySQL Connector
-                                </span>
-
+                                <span class="tag">MySQL</span>
+                                <span class="tag">SQL</span>
+                                <span class="tag">Python</span>
+                                <span class="tag">MySQL Connector</span>
                             </div>
-
 
                             <div class="project-points">
-
-                                <div class="project-point">
-                                    MySQL database schema
-                                </div>
-
-                                <div class="project-point">
-                                    SQL aggregation and filtering
-                                </div>
-
-                                <div class="project-point">
-                                    Low-stock alerts
-                                </div>
-
-                                <div class="project-point">
-                                    Python reporting layer
-                                </div>
-
-                                <div class="project-point">
-                                    Role-based access control
-                                </div>
-
+                                <div class="project-point">MySQL database schema</div>
+                                <div class="project-point">SQL aggregation and filtering</div>
+                                <div class="project-point">Low-stock alerts</div>
+                                <div class="project-point">Python reporting layer</div>
+                                <div class="project-point">Role-based access control</div>
                             </div>
 
-
-                            <a
-                                href="https://github.com/shariffsiddiq/SMART-INVENTORY-MANGEMENT-SYSTEM.git"
-                                target="_blank"
-                                class="btn btn-primary"
-                            >
-                                View on GitHub →
-                            </a>
-
+                            <a href="https://github.com/shariffsiddiq/SMART-INVENTORY-MANGEMENT-SYSTEM.git"
+                               target="_blank" rel="noopener noreferrer"
+                               class="btn btn-primary">View on GitHub →</a>
                         </div>
-
                     </div>
 
-
                     <!-- PROJECT 3 -->
-
                     <div class="project-card">
-
                         <div class="project-header">
-
-                            <small>
-                                Python Project
-                            </small>
-
-                            <h3>
-                                Facial Authentication
-                                for Food Ordering
-                            </h3>
-
+                            <small>Python Project</small>
+                            <h3>Facial Authentication for Food Ordering</h3>
                         </div>
 
-
                         <div class="project-body">
-
                             <p>
-
                                 A facial authentication system using
                                 128-dimensional facial descriptors and
                                 Euclidean distance for identity verification.
-
                             </p>
-
 
                             <div class="tags">
-
-                                <span class="tag">
-                                    Python
-                                </span>
-
-                                <span class="tag">
-                                    Facial Recognition
-                                </span>
-
-                                <span class="tag">
-                                    Euclidean Distance
-                                </span>
-
+                                <span class="tag">Python</span>
+                                <span class="tag">Facial Recognition</span>
+                                <span class="tag">Euclidean Distance</span>
                             </div>
-
 
                             <div class="project-points">
-
-                                <div class="project-point">
-                                    128D facial descriptors
-                                </div>
-
-                                <div class="project-point">
-                                    Euclidean distance matching
-                                </div>
-
-                                <div class="project-point">
-                                    93.2% accuracy
-                                </div>
-
-                                <div class="project-point">
-                                    Tested across 50+ users
-                                </div>
-
-                                <div class="project-point">
-                                    Prediction latency under 6 seconds
-                                </div>
-
+                                <div class="project-point">128D facial descriptors</div>
+                                <div class="project-point">Euclidean distance matching</div>
+                                <div class="project-point">93.2% accuracy</div>
+                                <div class="project-point">Tested across 50+ users</div>
+                                <div class="project-point">Prediction latency under 6 seconds</div>
                             </div>
 
-
-                            <a
-                                href="https://github.com/shariffsiddiq/React-food-project.git"
-                                target="_blank"
-                                class="btn btn-primary"
-                            >
-                                View on GitHub →
-                            </a>
-
+                            <a href="https://github.com/shariffsiddiq/React-food-project.git"
+                               target="_blank" rel="noopener noreferrer"
+                               class="btn btn-primary">View on GitHub →</a>
                         </div>
-
                     </div>
 
-
                 </div>
-
             </div>
-
         </div>
-
     </section>
 
-
-    <!-- =========================
-         CERTIFICATIONS
-    ========================= -->
-
+    <!-- CERTIFICATIONS -->
     <section id="certification">
-
         <div class="container">
-
             <div class="section-box reveal">
-
                 <div class="section-heading">
-
-                    <div class="eyebrow">
-                        Certifications
-                    </div>
-
-                    <h2>
-                        Continuous Learning.
-                    </h2>
-
+                    <div class="eyebrow">Certifications</div>
+                    <h2>Continuous Learning.</h2>
                 </div>
-
 
                 <div class="cert-grid">
-
-
-                    <!-- CERTIFICATION 1 -->
-
                     <div class="cert-card">
-
-                        <div class="cert-icon">
-                            📊
-                        </div>
-
+                        <div class="cert-icon">📊</div>
                         <div class="cert-info">
-
-                            <h3>
-                                Ultimate Job-Ready AI-Powered
-                                Data Analytics Course
-                            </h3>
-
-                            <p>
-                                CodeWithHarry · Data Analytics
-                            </p>
-
+                            <h3>Ultimate Job-Ready AI-Powered Data Analytics Course</h3>
+                            <p>CodeWithHarry · Data Analytics</p>
                         </div>
-
                     </div>
 
-
-                    <!-- CERTIFICATION 2 -->
-
                     <div class="cert-card">
-
-                        <div class="cert-icon">
-                            🔐
-                        </div>
-
+                        <div class="cert-icon">🔐</div>
                         <div class="cert-info">
-
-                            <h3>
-                                Google Cybersecurity
-                                Professional Certificate
-                            </h3>
-
-                            <p>
-                                Google · Coursera
-                            </p>
-
+                            <h3>Google Cybersecurity Professional Certificate</h3>
+                            <p>Google · Coursera</p>
                         </div>
-
                     </div>
 
-
-                    <!-- CERTIFICATION 3 -->
-
                     <div class="cert-card">
-
-                        <div class="cert-icon">
-                            💻
-                        </div>
-
+                        <div class="cert-icon">💻</div>
                         <div class="cert-info">
-
-                            <h3>
-                                MERN Full Stack Development
-                            </h3>
-
-                            <p>
-                                byteXL / Vignan's Foundation
-                            </p>
-
+                            <h3>MERN Full Stack Development</h3>
+                            <p>byteXL / Vignan's Foundation</p>
                         </div>
-
                     </div>
 
-
-                    <!-- CERTIFICATION 4 -->
-
                     <div class="cert-card">
-
-                        <div class="cert-icon">
-                            🛡️
-                        </div>
-
+                        <div class="cert-icon">🛡️</div>
                         <div class="cert-info">
-
-                            <h3>
-                                NPTEL – Practical Cyber Security
-                                for Cyber Security Practitioners
-                            </h3>
-
-                            <p>
-                                NPTEL · Elite Score: 92%
-                            </p>
-
+                            <h3>NPTEL – Practical Cyber Security for Cyber Security Practitioners</h3>
+                            <p>NPTEL · Elite Score: 92%</p>
                         </div>
-
                     </div>
 
-
-                    <!-- CERTIFICATION 5 -->
-
                     <div class="cert-card">
-
-                        <div class="cert-icon">
-                            🧑‍💻
-                        </div>
-
+                        <div class="cert-icon">🧑‍💻</div>
                         <div class="cert-info">
-
-                            <h3>
-                                BTJA – Entry Level
-                                Cybersecurity Certification
-                            </h3>
-
-                            <p>
-                                Cybersecurity Certification
-                            </p>
-
+                            <h3>BTJA – Entry Level Cybersecurity Certification</h3>
+                            <p>Cybersecurity Certification</p>
                         </div>
-
                     </div>
 
-
-                    <!-- CERTIFICATION 6 -->
-
                     <div class="cert-card">
-
-                        <div class="cert-icon">
-                            🎓
-                        </div>
-
+                        <div class="cert-icon">🎓</div>
                         <div class="cert-info">
-
-                            <h3>
-                                Ozone Cybersecurity
-                                Advanced Ethical Hacking Workshop
-                            </h3>
-
-                            <p>
-                                Ozone · Cybersecurity Workshop
-                            </p>
-
+                            <h3>Ozone Cybersecurity Advanced Ethical Hacking Workshop</h3>
+                            <p>Ozone · Cybersecurity Workshop</p>
                         </div>
-
                     </div>
-
-
                 </div>
-
             </div>
-
         </div>
-
     </section>
 
-
-    <!-- =========================
-         CONTACT
-    ========================= -->
-
+    <!-- CONTACT -->
     <section id="contact">
-
         <div class="container">
-
             <div class="section-box reveal">
-
                 <div class="contact-grid">
 
-
                     <div class="contact-intro">
-
-                        <div class="eyebrow">
-                            Contact
-                        </div>
-
-                        <h2>
-                            Let's Talk
-                            <br>
-                            About Data.
-                        </h2>
-
+                        <div class="eyebrow">Contact</div>
+                        <h2>Let's Talk<br>About Data.</h2>
                         <p>
-
                             I'm open to entry-level Data Analyst
                             opportunities, internships, collaborations
                             and projects where I can use data to solve
                             real-world problems.
-
                         </p>
-
                     </div>
 
-
                     <div class="contact-links">
-
-
-                        <a
-                            href="mailto:shariffsiddiq1975@gmail.com"
-                            class="contact-link"
-                        >
-
+                        <a href="mailto:shariffsiddiq1975@gmail.com" class="contact-link">
                             <div>
-
-                                <small>
-                                    Email
-                                </small>
-
-                                <strong>
-                                    shariffsiddiq1975@gmail.com
-                                </strong>
-
+                                <small>Email</small>
+                                <strong>shariffsiddiq1975@gmail.com</strong>
                             </div>
-
-                            <span class="arrow">
-                                ↗
-                            </span>
-
+                            <span class="arrow">↗</span>
                         </a>
 
-
-                        <a
-                            href="tel:+917013475053"
-                            class="contact-link"
-                        >
-
+                        <a href="tel:+917013475053" class="contact-link">
                             <div>
-
-                                <small>
-                                    Phone
-                                </small>
-
-                                <strong>
-                                    +91 7013475053
-                                </strong>
-
+                                <small>Phone</small>
+                                <strong>+91 7013475053</strong>
                             </div>
-
-                            <span class="arrow">
-                                ↗
-                            </span>
-
+                            <span class="arrow">↗</span>
                         </a>
 
-
-                        <a
-                            href="https://www.linkedin.com/in/shariff-siddiq-98b3782a7/"
-                            target="_blank"
-                            class="contact-link"
-                        >
-
+                        <a href="https://www.linkedin.com/in/shariff-siddiq-98b3782a7/"
+                           target="_blank" rel="noopener noreferrer" class="contact-link">
                             <div>
-
-                                <small>
-                                    LinkedIn
-                                </small>
-
-                                <strong>
-                                    Connect with me
-                                </strong>
-
+                                <small>LinkedIn</small>
+                                <strong>Connect with me</strong>
                             </div>
-
-                            <span class="arrow">
-                                ↗
-                            </span>
-
+                            <span class="arrow">↗</span>
                         </a>
 
-
-                        <a
-                            href="https://github.com/shariffsiddiq"
-                            target="_blank"
-                            class="contact-link"
-                        >
-
+                        <a href="https://github.com/shariffsiddiq"
+                           target="_blank" rel="noopener noreferrer" class="contact-link">
                             <div>
-
-                                <small>
-                                    GitHub
-                                </small>
-
-                                <strong>
-                                    github.com/shariffsiddiq
-                                </strong>
-
+                                <small>GitHub</small>
+                                <strong>github.com/shariffsiddiq</strong>
                             </div>
-
-                            <span class="arrow">
-                                ↗
-                            </span>
-
+                            <span class="arrow">↗</span>
                         </a>
-
-
                     </div>
 
                 </div>
-
             </div>
-
         </div>
-
     </section>
 
+    <!-- FOOTER -->
+    <footer>
+        <div class="container footer-content">
+            <p>“Every dataset tells a story. Thanks for taking the time to explore mine.”</p>
+            <a href="#top" class="back-to-top">Back to Top ↑</a>
+            <p>© 2026 Shariff Abubbakar Siddiq | Data Analytics</p>
+        </div>
+    </footer>
 
-    <!-- =========================
-         FOOTER
-    ========================= -->
-
-<footer>
-
-    <div class="container footer-content">
-
-        <p>
-            “Every dataset tells a story. Thanks for taking the time to explore mine.”
-        </p>
-
-        <a href="#top" class="back-to-top">Back to Top ↑</a>
-
-        <p>
-            © 2026 Shariff Abubbakar Siddiq | Data Analytics 
-        </p>
-
-    </div>
-
-</footer>
-
-
-    <!-- =========================
-         JAVASCRIPT
-    ========================= -->
-
+    <!-- JAVASCRIPT -->
     <script>
-
         const menuBtn = document.getElementById("menuBtn");
-
         const navLinks = document.getElementById("navLinks");
 
-
         menuBtn.addEventListener("click", () => {
-
-            navLinks.classList.toggle("active");
-
+            const isOpen = navLinks.classList.toggle("active");
+            menuBtn.setAttribute("aria-expanded", String(isOpen));
         });
-
 
         document.querySelectorAll(".nav-links a").forEach(link => {
-
             link.addEventListener("click", () => {
-
                 navLinks.classList.remove("active");
-
+                menuBtn.setAttribute("aria-expanded", "false");
             });
-
         });
 
+        if ("IntersectionObserver" in window) {
+            const observer = new IntersectionObserver(
+                entries => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add("show");
+                            observer.unobserve(entry.target);
+                        }
+                    });
+                },
+                { threshold: 0.12 }
+            );
 
-        const observer = new IntersectionObserver(
-
-            entries => {
-
-                entries.forEach(entry => {
-
-                    if (entry.isIntersecting) {
-
-                        entry.target.classList.add("show");
-
-                    }
-
-                });
-
-            },
-
-            {
-                threshold: 0.12
-            }
-
-        );
-
-
-        document.querySelectorAll(".reveal").forEach(element => {
-
-            observer.observe(element);
-
-        });
-
+            document.querySelectorAll(".reveal").forEach(element => {
+                observer.observe(element);
+            });
+        } else {
+            document.querySelectorAll(".reveal").forEach(element => {
+                element.classList.add("show");
+            });
+        }
     </script>
-
-
 </body>
 </html>
