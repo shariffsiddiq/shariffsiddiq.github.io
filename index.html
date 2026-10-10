@@ -937,7 +937,58 @@
             }
 
         }
+    
+/* Interactive About Cards */
 
+.info-item,
+.education-card,
+.leadership-card {
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.info-item:hover,
+.education-card:hover,
+.leadership-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+    border-color: var(--border);
+}
+
+.education-link {
+    color: inherit;
+    text-decoration: none;
+    display: inline;
+    transition: opacity 0.25s ease;
+}
+
+.education-link:hover {
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+.education-link:focus-visible {
+    outline: 2px solid currentColor;
+    outline-offset: 4px;
+    border-radius: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .info-item,
+    .education-card,
+    .leadership-card {
+        transition: none;
+    }
+
+    .info-item:hover,
+    .education-card:hover,
+    .leadership-card:hover {
+        transform: none;
+    }
+}
+        
     </style>
 </head>
 
