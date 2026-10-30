@@ -1413,8 +1413,185 @@
         transition: none !important;
     }
 }
+  
+/* =========================
+   INTERNSHIP
+========================= */
 
-    </style>
+.internship-overview {
+    background: var(--dark);
+    color: white;
+    border-radius: 22px;
+    padding: 35px;
+    margin-bottom: 25px;
+}
+
+.internship-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.internship-label {
+    color: var(--accent);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+.internship-overview h3 {
+    font-family: "Playfair Display", serif;
+    font-size: 30px;
+    line-height: 1.2;
+    margin: 10px 0;
+}
+
+.internship-status {
+    display: inline-block;
+    padding: 7px 14px;
+    border: 1px solid var(--accent);
+    border-radius: 50px;
+    color: var(--accent);
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.internship-overview p {
+    color: #dedede;
+    font-size: 14px;
+    max-width: 850px;
+    margin-bottom: 20px;
+}
+
+.internship-tools {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 9px;
+}
+
+.internship-tools span {
+    padding: 7px 13px;
+    border: 1px solid #555;
+    border-radius: 50px;
+    font-size: 12px;
+}
+
+.internship-projects-heading {
+    margin: 30px 0 18px;
+}
+
+.internship-projects-heading h3 {
+    font-family: "Playfair Display", serif;
+    font-size: 25px;
+}
+
+.internship-projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+
+.internship-project-card {
+    display: flex;
+    flex-direction: column;
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    padding: 25px;
+    transition: 0.3s;
+}
+
+.internship-project-card:hover {
+    transform: translateY(-6px);
+    border-color: var(--dark);
+    box-shadow: 6px 6px 0 var(--accent);
+}
+
+.internship-project-number {
+    color: var(--accent-dark);
+    font-size: 12px;
+    font-weight: 700;
+    margin-bottom: 13px;
+}
+
+.internship-project-card h4 {
+    font-family: "Playfair Display", serif;
+    font-size: 21px;
+    line-height: 1.25;
+    margin-bottom: 13px;
+}
+
+.internship-project-card p {
+    color: var(--muted);
+    font-size: 13px;
+    margin-bottom: 20px;
+}
+
+.internship-project-card .btn {
+    margin-top: auto;
+    width: fit-content;
+}
+
+.internship-certificate {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    background: var(--light-accent);
+    border: 1px solid var(--accent);
+    border-radius: 18px;
+    padding: 22px;
+    margin-top: 25px;
+}
+
+.internship-certificate-icon {
+    min-width: 55px;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    border-radius: 14px;
+    font-size: 25px;
+}
+
+.internship-certificate h4 {
+    font-size: 16px;
+    margin-bottom: 4px;
+}
+
+.internship-certificate p {
+    color: var(--muted);
+    font-size: 13px;
+}
+
+@media (max-width: 950px) {
+    .internship-projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .internship-project-card {
+        max-width: 700px;
+    }
+}
+
+@media (max-width: 600px) {
+    .internship-overview {
+        padding: 25px;
+    }
+
+    .internship-overview h3 {
+        font-size: 25px;
+    }
+
+    .internship-certificate {
+        align-items: flex-start;
+    }
+}
+</style>   
 </head>
 
 
@@ -1464,7 +1641,11 @@
                 <li>
                     <a href="#workflow">Workflow</a>
                 </li>
-
+                
+                <li>
+                    <a href="#internship">Internship</a>
+                </li>
+                
                 <li>
                     <a href="#projects">Projects</a>
                 </li>
@@ -2037,6 +2218,221 @@
     </section>
 
 
+<!-- =========================
+     INTERNSHIP
+========================= -->
+
+<section id="internship">
+
+    <div class="container">
+
+        <div class="section-box reveal">
+
+            <div class="section-heading">
+
+                <div class="eyebrow">
+                    Professional Experience
+                </div>
+
+                <h2>
+                    Internship & Experience.
+                </h2>
+
+                <p class="description">
+                    Practical experience gained through industry-oriented
+                    data analytics projects, applying technical skills to
+                    real-world datasets and business problems.
+                </p>
+
+            </div>
+
+            <div class="internship-overview">
+
+                <div class="internship-top">
+
+                    <div>
+
+                        <span class="internship-label">
+                            Data Science & Analytics Internship
+                        </span>
+
+                        <h3>
+                            Future Interns
+                        </h3>
+
+                        <span class="internship-label">
+                            Completed Internship
+                        </span>
+
+                    </div>
+
+                    <span class="internship-status">
+                        ✓ Completed
+                    </span>
+
+                </div>
+
+                <p>
+                    Successfully completed the Data Science & Analytics
+                    Internship at Future Interns, working on practical
+                    data analytics projects that strengthened my
+                    problem-solving skills and hands-on experience.
+                    Throughout the internship, I applied data cleaning,
+                    analysis and visualization techniques to transform
+                    datasets into meaningful insights.
+                </p>
+
+                <div class="internship-tools">
+
+                    <span>Excel</span>
+                    <span>Python</span>
+                    <span>SQL</span>
+                    <span>Power BI</span>
+                    <span>Data Analytics</span>
+                    <span>Data Visualization</span>
+
+                </div>
+
+            </div>
+
+
+            <div class="internship-projects-heading">
+
+                <h3>
+                    Projects Completed During Internship
+                </h3>
+
+            </div>
+
+
+            <div class="internship-projects-grid">
+
+
+                <!-- INTERNSHIP PROJECT 1 -->
+
+                <div class="internship-project-card">
+
+                    <div class="internship-project-number">
+                        TASK 01
+                    </div>
+
+                    <h4>
+                        Business Sales Performance Analytics
+                    </h4>
+
+                    <p>
+                        Analyzed Superstore sales data to understand
+                        business performance, explore sales patterns
+                        and identify useful business insights through
+                        data analysis and visualization.
+                    </p>
+
+                    <a
+                        href="https://github.com/shariffsiddiq/FUTURE_DS_01.git"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="btn btn-primary"
+                    >
+                        View Project →
+                    </a>
+
+                </div>
+
+
+                <!-- INTERNSHIP PROJECT 2 -->
+
+                <div class="internship-project-card">
+
+                    <div class="internship-project-number">
+                        TASK 02
+                    </div>
+
+                    <h4>
+                        Customer Retention & Churn Analysis
+                    </h4>
+
+                    <p>
+                        Explored customer churn patterns, retention
+                        trends, contract types and customer tenure
+                        to understand factors associated with
+                        customer departures.
+                    </p>
+
+                    <a
+                        href="https://github.com/shariffsiddiq/FUTURE_DS_02.git"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="btn btn-primary"
+                    >
+                        View Project →
+                    </a>
+
+                </div>
+
+
+                <!-- INTERNSHIP PROJECT 3 -->
+
+                <div class="internship-project-card">
+
+                    <div class="internship-project-number">
+                        TASK 03
+                    </div>
+
+                    <h4>
+                        Marketing Funnel Analysis
+                    </h4>
+
+                    <p>
+                        Analyzed marketing campaign performance,
+                        customer conversion patterns and funnel
+                        drop-offs to identify opportunities for
+                        improving campaign effectiveness.
+                    </p>
+
+                    <a
+                        href="https://github.com/shariffsiddiq/FUTURE_DS_03.git"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="btn btn-primary"
+                    >
+                        View Project →
+                    </a>
+
+                </div>
+
+
+            </div>
+
+
+            <!-- INTERNSHIP CERTIFICATE -->
+
+            <div class="internship-certificate">
+
+                <div class="internship-certificate-icon">
+                    🏆
+                </div>
+
+                <div>
+
+                    <h4>
+                        Certificate of Completion
+                    </h4>
+
+                    <p>
+                        Data Science & Analytics Internship
+                        · Future Interns
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+    
     <!-- =========================
          PROJECTS
     ========================= -->
